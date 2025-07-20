@@ -1,0 +1,134 @@
+<!-- mybooks.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - My Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i data-lucide="book"></i>
+                    <span>BoiSwap BD</span>
+                </a>
+                <div class="nav-icons">
+                    <a href="#"><i data-lucide="bell"></i></a>
+                    <a href="profile.html"><i data-lucide="user"></i></a>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home Dashboard</a>
+                <a href="browse.html">Browse Books</a>
+                <a href="addbook.html">Add New Book</a>
+                <a href="mybooks.html" class="active">My Books</a>
+                <a href="chat.html">Messages</a>
+                <a href="profile.html">User Profile</a>
+            </nav>
+        </header>
+        
+        <main class="screen">
+            <h2>My Books</h2>
+            
+            <div class="category-filter mb-6">
+                <a href="#" class="active">Listed Books (5)</a>
+                <a href="#">Borrowed (2)</a>
+                <a href="#">Lent Out (3)</a>
+                <a href="#" class="bg-red-100 text-red-800">Requests (4)</a>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="book-card">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">HSC Physics 1st Paper</h3>
+                            <p class="text-sm text-gray-600">Available for Exchange</p>
+                            <div class="flex items-center mt-2">
+                                <span class="book-type">Available</span>
+                                <span class="ml-2 text-sm text-gray-500">3 requests pending</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="addbook.html" class="text-blue-600 text-sm">Edit</a>
+                            <a href="#" class="text-red-600 text-sm">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card bg-orange-50 border-orange-200">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Programming with C</h3>
+                            <p class="text-sm text-gray-600">Lent to Nasir Ahmed</p>
+                            <p class="text-sm text-red-600 mt-1">Due: Jan 25, 2025</p>
+                        </div>
+                        <a href="chat.html" class="btn bg-orange-500">Send Reminder</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">English Grammar in Use</h3>
+                            <p class="text-sm text-gray-600">Available for Lending</p>
+                            <div class="flex items-center mt-2">
+                                <span class="book-type">Available</span>
+                                <span class="ml-2 text-sm text-gray-500">1 request pending</span>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <a href="addbook.html" class="text-blue-600 text-sm">Edit</a>
+                            <a href="#" class="text-red-600 text-sm">Delete</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card bg-blue-50 border-blue-200">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-semibold">Data Structures & Algorithms</h3>
+                            <p class="text-sm text-gray-600">Borrowed from Faisal Ahmed</p>
+                            <p class="text-sm text-blue-600 mt-1">Due: Dec 15, 2024</p>
+                        </div>
+                        <a href="chat.html" class="btn">Extend</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 BoiSwap BD - Book Exchange Platform</p>
+        </footer>
+        
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="browse.html" class="nav-item">
+                <i data-lucide="search"></i>
+                <span>Browse</span>
+            </a>
+            <a href="addbook.html" class="nav-item">
+                <i data-lucide="plus-circle"></i>
+                <span>Add</span>
+            </a>
+            <a href="mybooks.html" class="nav-item active">
+                <i data-lucide="book-open"></i>
+                <span>My Books</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
