@@ -1,0 +1,139 @@
+<!-- addbook.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - Add New Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i data-lucide="book"></i>
+                    <span>BoiSwap BD</span>
+                </a>
+                <div class="nav-icons">
+                    <a href="#"><i data-lucide="bell"></i></a>
+                    <a href="profile.html"><i data-lucide="user"></i></a>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home Dashboard</a>
+                <a href="browse.html">Browse Books</a>
+                <a href="addbook.html" class="active">Add New Book</a>
+                <a href="mybooks.html">My Books</a>
+                <a href="chat.html">Messages</a>
+                <a href="profile.html">User Profile</a>
+            </nav>
+        </header>
+        
+        <main class="screen">
+            <div class="flex items-center mb-4">
+                <a href="browse.html" class="mr-3"><i data-lucide="arrow-left"></i></a>
+                <h2>Add New Book</h2>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="form-group">
+                    <label>Book Title</label>
+                    <input type="text" placeholder="Enter book title">
+                </div>
+                
+                <div class="form-group">
+                    <label>Author</label>
+                    <input type="text" placeholder="Author name">
+                </div>
+                
+                <div class="grid-cols-2 gap-4">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select>
+                            <option>Select category</option>
+                            <option>Academic</option>
+                            <option>Fiction</option>
+                            <option>Non-Fiction</option>
+                            <option>Religious</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Condition</label>
+                        <select>
+                            <option>Select condition</option>
+                            <option>New</option>
+                            <option>Excellent</option>
+                            <option>Good</option>
+                            <option>Fair</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Available For</label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="type" checked>
+                            Exchange
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="type">
+                            Lending
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="type">
+                            Donation
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="District, Area">
+                </div>
+                
+                <div class="form-group">
+                    <label>Book Cover</label>
+                    <div class="image-upload">
+                        <p>Click to upload image</p>
+                    </div>
+                </div>
+                
+                <button class="btn w-full py-3">Add Book</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 BoiSwap BD - Book Exchange Platform</p>
+        </footer>
+        
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="browse.html" class="nav-item">
+                <i data-lucide="search"></i>
+                <span>Browse</span>
+            </a>
+            <a href="addbook.html" class="nav-item active">
+                <i data-lucide="plus-circle"></i>
+                <span>Add</span>
+            </a>
+            <a href="mybooks.html" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>My Books</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
