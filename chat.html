@@ -1,0 +1,139 @@
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - Messages</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i data-lucide="book"></i>
+                    <span>BoiSwap BD</span>
+                </a>
+                <div class="nav-icons">
+                    <a href="#"><i data-lucide="bell"></i></a>
+                    <a href="profile.html"><i data-lucide="user"></i></a>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home Dashboard</a>
+                <a href="browse.html">Browse Books</a>
+                <a href="addbook.html">Add New Book</a>
+                <a href="mybooks.html">My Books</a>
+                <a href="chat.html" class="active">Messages</a>
+                <a href="profile.html">User Profile</a>
+            </nav>
+        </header>
+        
+        <main class="screen">
+            <h2>Messages</h2>
+            
+            <div class="chat-container flex">
+                <div class="chat-list">
+                    <div class="chat-item active">
+                        <div class="chat-item-header">
+                            <span class="font-medium">Ahmed Hassan</span>
+                            <span class="text-xs text-gray-500">2m ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600">About HSC Physics book...</p>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-item-header">
+                            <span class="font-medium">Fatima Khan</span>
+                            <span class="text-xs text-gray-500">1h ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Thanks for the book!</p>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-item-header">
+                            <span class="font-medium">Rahim Uddin</span>
+                            <span class="text-xs text-gray-500">3h ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600">Can I extend the borrowing period?</p>
+                    </div>
+                    
+                    <div class="chat-item">
+                        <div class="chat-item-header">
+                            <span class="font-medium">Sara Akhtar</span>
+                            <span class="text-xs text-gray-500">1d ago</span>
+                        </div>
+                        <p class="text-sm text-gray-600">I'm interested in your Biology book</p>
+                    </div>
+                </div>
+                
+                <div class="chat-messages">
+                    <div class="flex items-center border-b border-gray-200 pb-2 mb-4">
+                        <i data-lucide="user" class="mr-2 text-gray-600"></i>
+                        <span class="font-medium">Ahmed Hassan</span>
+                    </div>
+                    
+                    <div class="message-container">
+                        <div class="message message-in">
+                            Hi! I'm interested in your HSC Physics book. Is it still available for exchange?
+                        </div>
+                        
+                        <div class="message message-out">
+                            Yes, it's available! What do you have to offer in exchange?
+                        </div>
+                        
+                        <div class="message message-in">
+                            I have HSC Chemistry 2nd paper by the same author. Would that work?
+                        </div>
+                        
+                        <div class="message message-out">
+                            That sounds perfect! When would you like to meet?
+                        </div>
+                        
+                        <div class="message message-in">
+                            How about this Saturday at 3 PM? I'm in Dhanmondi area.
+                        </div>
+                    </div>
+                    
+                    <div class="message-input">
+                        <input type="text" placeholder="Type your message...">
+                        <button class="btn btn-icon"><i data-lucide="send"></i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 BoiSwap BD - Book Exchange Platform</p>
+        </footer>
+        
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="browse.html" class="nav-item">
+                <i data-lucide="search"></i>
+                <span>Browse</span>
+            </a>
+            <a href="addbook.html" class="nav-item">
+                <i data-lucide="plus-circle"></i>
+                <span>Add</span>
+            </a>
+            <a href="mybooks.html" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>My Books</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
