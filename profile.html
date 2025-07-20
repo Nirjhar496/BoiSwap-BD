@@ -1,0 +1,157 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - User Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i data-lucide="book"></i>
+                    <span>BoiSwap BD</span>
+                </a>
+                <div class="nav-icons">
+                    <a href="#"><i data-lucide="bell"></i></a>
+                    <a href="profile.html" class="active"><i data-lucide="user"></i></a>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home Dashboard</a>
+                <a href="browse.html">Browse Books</a>
+                <a href="addbook.html">Add New Book</a>
+                <a href="mybooks.html">My Books</a>
+                <a href="chat.html">Messages</a>
+                <a href="profile.html" class="active">User Profile</a>
+            </nav>
+        </header>
+        
+        <main class="screen">
+            <div class="profile-header flex items-center mb-6">
+                <div class="profile-avatar w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                    <i data-lucide="user"></i>
+                </div>
+                <div>
+                    <h2>Ahmed Hassan</h2>
+                    <div class="flex items-center mt-2">
+                        <div class="flex text-yellow-400">
+                            <i data-lucide="star" fill="currentColor"></i>
+                            <i data-lucide="star" fill="currentColor"></i>
+                            <i data-lucide="star" fill="currentColor"></i>
+                            <i data-lucide="star" fill="currentColor"></i>
+                            <i data-lucide="star"></i>
+                        </div>
+                        <span class="ml-2 text-sm text-gray-600">4.2 (23 reviews)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-stats grid grid-cols-2 gap-6 mb-6">
+                <div class="stat-card">
+                    <h3 class="font-semibold text-gray-700 mb-3">Statistics</h3>
+                    <div class="stat-item flex justify-between mb-2">
+                        <span class="text-sm text-gray-600">Books Exchanged:</span>
+                        <span class="font-medium">15</span>
+                    </div>
+                    <div class="stat-item flex justify-between mb-2">
+                        <span class="text-sm text-gray-600">Books Lent:</span>
+                        <span class="font-medium">28</span>
+                    </div>
+                    <div class="stat-item flex justify-between">
+                        <span class="text-sm text-gray-600">Books Donated:</span>
+                        <span class="font-medium">5</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <h3 class="font-semibold text-gray-700 mb-3">Details</h3>
+                    <div class="stat-item flex justify-between mb-2">
+                        <span class="text-sm text-gray-600">Location:</span>
+                        <span class="font-medium">Dhanmondi, Dhaka</span>
+                    </div>
+                    <div class="stat-item flex justify-between mb-2">
+                        <span class="text-sm text-gray-600">Member Since:</span>
+                        <span class="font-medium">Jan 2024</span>
+                    </div>
+                    <div class="stat-item flex justify-between">
+                        <span class="text-sm text-gray-600">Favorite Genre:</span>
+                        <span class="font-medium">Academic, Fiction</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="font-semibold text-gray-700 mb-3">Recent Activity</h3>
+                <div class="space-y-3">
+                    <div class="flex items-start">
+                        <div class="bg-green-100 p-2 rounded-full mr-3">
+                            <i data-lucide="book-open" class="text-green-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Lent "Himu Series" to Fatima</p>
+                            <p class="text-sm text-gray-600">2 days ago</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-blue-100 p-2 rounded-full mr-3">
+                            <i data-lucide="book" class="text-blue-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Added "Programming with C"</p>
+                            <p class="text-sm text-gray-600">5 days ago</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="bg-purple-100 p-2 rounded-full mr-3">
+                            <i data-lucide="repeat" class="text-purple-700"></i>
+                        </div>
+                        <div>
+                            <p class="font-medium">Exchanged Physics book</p>
+                            <p class="text-sm text-gray-600">1 week ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="btn w-full">Edit Profile</a>
+        </main>
+        
+        <footer>
+            <p>© 2023 BoiSwap BD - Book Exchange Platform</p>
+        </footer>
+        
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="browse.html" class="nav-item">
+                <i data-lucide="search"></i>
+                <span>Browse</span>
+            </a>
+            <a href="addbook.html" class="nav-item">
+                <i data-lucide="plus-circle"></i>
+                <span>Add</span>
+            </a>
+            <a href="mybooks.html" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>My Books</span>
+            </a>
+            <a href="profile.html" class="nav-item active">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
