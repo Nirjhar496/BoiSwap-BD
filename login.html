@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --primary-light: #d1fae5;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --bg-light: #f9fafb;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius: 12px;
+            --radius-sm: 8px;
+        }
+        
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .auth-container {
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            width: 100%;
+            max-width: 420px;
+            overflow: hidden;
+        }
+        
+        .auth-header {
+            background: linear-gradient(to right, var(--primary), #3b82f6);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .logo svg {
+            color: white;
+        }
+        
+        .auth-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .auth-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .auth-form {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+        }
+        
+        .input-with-icon {
+            position: relative;
+        }
+        
+        .input-with-icon input {
+            width: 100%;
+            padding: 12px 16px 12px 44px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        
+        .input-with-icon input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+        
+        .input-with-icon svg {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-light);
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        
+        .remember-forgot label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+        
+        .remember-forgot a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            padding: 14px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 25px 0;
+        }
+        
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .divider span {
+            padding: 0 15px;
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        
+        .social-login {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+        
+        .social-btn {
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: var(--radius-sm);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .social-btn:hover {
+            border-color: var(--primary);
+            background: var(--primary-light);
+        }
+        
+        .social-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .auth-footer {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-light);
+            padding: 0 30px 30px;
+        }
+        
+        .auth-footer a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .auth-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .switch-form {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .switch-form a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 5px;
+        }
+        
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Terms and conditions checkbox */
+        .terms {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .terms label {
+            font-size: 13px;
+            color: var(--text-light);
+            line-height: 1.5;
+        }
+        
+        .terms a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .terms a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Password strength indicator */
+        .password-strength {
+            margin-top: 8px;
+            height: 4px;
+            border-radius: 2px;
+            background: #e5e7eb;
+            overflow: hidden;
+        }
+        
+        .strength-meter {
+            height: 100%;
+            width: 0%;
+            background: #ef4444;
+            transition: width 0.3s, background 0.3s;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .auth-container {
+                max-width: 100%;
+            }
+            
+            .auth-form {
+                padding: 25px 20px;
+            }
+            
+            .social-login {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="auth-container" id="login-container">
+        <div class="auth-header">
+            <div class="logo">
+                <i data-lucide="book"></i>
+                <span>BoiSwap BD</span>
+            </div>
+            <h2>Welcome Back!</h2>
+            <p>Sign in to continue your book sharing journey</p>
+        </div>
+        
+        <div class="auth-form">
+            <div class="form-group">
+                <label for="login-email">Email Address</label>
+                <div class="input-with-icon">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="login-email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <div class="input-with-icon">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+            </div>
+            
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox" id="remember-me">
+                    Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            
+            <button class="btn" id="login-btn">Sign In</button>
+            
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-login">
+                <div class="social-btn">
+                    <i data-lucide="facebook"></i>
+                </div>
+                <div class="social-btn">
+                    <i data-lucide="github"></i>
+                </div>
+                <div class="social-btn">
+                    <i data-lucide="google"></i>
+                </div>
+            </div>
+            
+            <div class="switch-form">
+                Don't have an account? <a href="#" id="show-register">Sign Up</a>
+            </div>
+        </div>
+        
+        <div class="auth-footer">
+            By signing in, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+    
+    <!-- Register Form (Initially hidden) -->
+    <div class="auth-container" id="register-container" style="display: none;">
+        <div class="auth-header">
+            <div class="logo">
+                <i data-lucide="book"></i>
+                <span>BoiSwap BD</span>
+            </div>
+            <h2>Create an Account</h2>
+            <p>Join our community of book lovers</p>
+        </div>
+        
+        <div class="auth-form">
+            <div class="form-group">
+                <label for="register-name">Full Name</label>
+                <div class="input-with-icon">
+                    <i data-lucide="user"></i>
+                    <input type="text" id="register-name" placeholder="Your full name" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="register-email">Email Address</label>
+                <div class="input-with-icon">
+                    <i data-lucide="mail"></i>
+                    <input type="email" id="register-email" placeholder="your@email.com" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="register-password">Password</label>
+                <div class="input-with-icon">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="register-password" placeholder="Create a password" required>
+                </div>
+                <div class="password-strength">
+                    <div class="strength-meter" id="password-strength-meter"></div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="register-confirm">Confirm Password</label>
+                <div class="input-with-icon">
+                    <i data-lucide="lock"></i>
+                    <input type="password" id="register-confirm" placeholder="Confirm your password" required>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="register-location">Location (District)</label>
+                <div class="input-with-icon">
+                    <i data-lucide="map-pin"></i>
+                    <select id="register-location" class="w-full p-2 border rounded">
+                        <option value="">Select your district</option>
+                        <option value="dhaka">Dhaka</option>
+                        <option value="chittagong">Chittagong</option>
+                        <option value="sylhet">Sylhet</option>
+                        <option value="khulna">Khulna</option>
+                        <option value="barisal">Barisal</option>
+                        <option value="rajshahi">Rajshahi</option>
+                        <option value="rangpur">Rangpur</option>
+                        <option value="mymensingh">Mymensingh</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+            </div>
+            
+            <button class="btn" id="register-btn">Create Account</button>
+            
+            <div class="switch-form">
+                Already have an account? <a href="#" id="show-login">Sign In</a>
+            </div>
+        </div>
+        
+        <div class="auth-footer">
+            By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Lucide icons
+            lucide.createIcons();
+            
+            // DOM elements
+            const loginContainer = document.getElementById('login-container');
+            const registerContainer = document.getElementById('register-container');
+            const showRegisterBtn = document.getElementById('show-register');
+            const showLoginBtn = document.getElementById('show-login');
+            const loginBtn = document.getElementById('login-btn');
+            const registerBtn = document.getElementById('register-btn');
+            const passwordInput = document.getElementById('register-password');
+            const passwordStrengthMeter = document.getElementById('password-strength-meter');
+            
+            // Toggle between login and register forms
+            showRegisterBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                loginContainer.style.display = 'none';
+                registerContainer.style.display = 'block';
+            });
+            
+            showLoginBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                registerContainer.style.display = 'none';
+                loginContainer.style.display = 'block';
+            });
+            
+            // Password strength indicator
+            passwordInput.addEventListener('input', function() {
+                const password = this.value;
+                let strength = 0;
+                
+                // Length check
+                if (password.length >= 8) strength += 25;
+                if (password.length >= 12) strength += 15;
+                
+                // Character diversity
+                if (/[A-Z]/.test(password)) strength += 20;
+                if (/[a-z]/.test(password)) strength += 20;
+                if (/\d/.test(password)) strength += 20;
+                if (/[^A-Za-z0-9]/.test(password)) strength += 20;
+                
+                // Update the meter
+                passwordStrengthMeter.style.width = Math.min(strength, 100) + '%';
+                
+                // Update color based on strength
+                if (strength < 40) {
+                    passwordStrengthMeter.style.backgroundColor = '#ef4444'; // red
+                } else if (strength < 70) {
+                    passwordStrengthMeter.style.backgroundColor = '#f59e0b'; // amber
+                } else {
+                    passwordStrengthMeter.style.backgroundColor = '#10b981'; // green
+                }
+            });
+            
+            // Login functionality
+            loginBtn.addEventListener('click', function() {
+                const email = document.getElementById('login-email').value;
+                const password = document.getElementById('login-password').value;
+                
+                if (!email || !password) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+                
+                // Simple validation
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                // Simulate login process
+                alert(`Login successful! Welcome back, ${email.split('@')[0]}`);
+                
+                // Redirect to dashboard (simulated)
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            });
+            
+            // Register functionality
+            registerBtn.addEventListener('click', function() {
+                const name = document.getElementById('register-name').value;
+                const email = document.getElementById('register-email').value;
+                const password = document.getElementById('register-password').value;
+                const confirmPassword = document.getElementById('register-confirm').value;
+                const location = document.getElementById('register-location').value;
+                
+                if (!name || !email || !password || !confirmPassword || !location) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+                
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+                
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+                
+                if (password.length < 8) {
+                    alert('Password must be at least 8 characters long');
+                    return;
+                }
+                
+                if (!document.getElementById('terms').checked) {
+                    alert('Please agree to the Terms of Service and Privacy Policy');
+                    return;
+                }
+                
+                // Simulate registration process
+                alert(`Registration successful! Welcome to BoiSwap BD, ${name}`);
+                
+                // Redirect to dashboard (simulated)
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1000);
+            });
+            
+            // Email validation helper
+            function validateEmail(email) {
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                return re.test(String(email).toLowerCase());
+            }
+        });
+    </script>
+</body>
+</html>
