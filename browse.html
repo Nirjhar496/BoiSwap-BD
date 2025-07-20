@@ -1,0 +1,169 @@
+<!-- browse.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoiSwap BD - Browse Books</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <a href="index.html" class="logo">
+                    <i data-lucide="book"></i>
+                    <span>BoiSwap BD</span>
+                </a>
+                <div class="nav-icons">
+                    <a href="#"><i data-lucide="bell"></i></a>
+                    <a href="profile.html"><i data-lucide="user"></i></a>
+                </div>
+            </div>
+            <nav>
+                <a href="index.html">Home Dashboard</a>
+                <a href="browse.html" class="active">Browse Books</a>
+                <a href="addbook.html">Add New Book</a>
+                <a href="mybooks.html">My Books</a>
+                <a href="chat.html">Messages</a>
+                <a href="profile.html">User Profile</a>
+            </nav>
+        </header>
+        
+        <main class="screen">
+            <div class="flex items-center justify-between mb-4">
+                <h2>Browse Books</h2>
+                <a href="addbook.html" class="btn"><i data-lucide="plus" class="mr-2"></i>Add Book</a>
+            </div>
+            
+            <div class="grid-cols-2 mb-4">
+                <select class="w-full p-2 border rounded">
+                    <option>All Categories</option>
+                    <option>Academic</option>
+                    <option>Fiction</option>
+                    <option>Non-Fiction</option>
+                </select>
+                <select class="w-full p-2 border rounded">
+                    <option>All Districts</option>
+                    <option>Dhaka</option>
+                    <option>Chittagong</option>
+                    <option>Sylhet</option>
+                </select>
+            </div>
+            
+            <div class="book-grid">
+                <div class="book-card">
+                    <div class="book-image">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <div class="book-title">উপন্যাস সমগ্র</div>
+                    <div class="book-author">রবীন্দ্রনাথ ঠাকুর</div>
+                    <div class="book-meta">
+                        <i data-lucide="user"></i>
+                        <span>নাসির হোসেন</span>
+                    </div>
+                    <div class="book-meta">
+                        <i data-lucide="map-pin"></i>
+                        <span>পুরান ঢাকা</span>
+                    </div>
+                    <div class="book-footer">
+                        <span class="book-type">Lend</span>
+                        <a href="chat.html" class="btn">Request</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <div class="book-title">জীববিজ্ঞান - HSC</div>
+                    <div class="book-author">ড. মোহাম্মদ আবুল হাসান</div>
+                    <div class="book-meta">
+                        <i data-lucide="user"></i>
+                        <span>সারা আকতার</span>
+                    </div>
+                    <div class="book-meta">
+                        <i data-lucide="map-pin"></i>
+                        <span>উত্তরা, ঢাকা</span>
+                    </div>
+                    <div class="book-footer">
+                        <span class="book-type">Exchange</span>
+                        <a href="chat.html" class="btn">Request</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <div class="book-title">English Grammar in Use</div>
+                    <div class="book-author">Raymond Murphy</div>
+                    <div class="book-meta">
+                        <i data-lucide="user"></i>
+                        <span>Karim Rahman</span>
+                    </div>
+                    <div class="book-meta">
+                        <i data-lucide="map-pin"></i>
+                        <span>Mirpur, Dhaka</span>
+                    </div>
+                    <div class="book-footer">
+                        <span class="book-type">Exchange</span>
+                        <a href="chat.html" class="btn">Request</a>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-image">
+                        <i data-lucide="book"></i>
+                    </div>
+                    <div class="book-title">Data Structures & Algorithms</div>
+                    <div class="book-author">Narasimha Karumanchi</div>
+                    <div class="book-meta">
+                        <i data-lucide="user"></i>
+                        <span>Faisal Ahmed</span>
+                    </div>
+                    <div class="book-meta">
+                        <i data-lucide="map-pin"></i>
+                        <span>Gulshan, Dhaka</span>
+                    </div>
+                    <div class="book-footer">
+                        <span class="book-type">Lend</span>
+                        <a href="chat.html" class="btn">Request</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2023 BoiSwap BD - Book Exchange Platform</p>
+        </footer>
+        
+        <div class="mobile-nav">
+            <a href="index.html" class="nav-item">
+                <i data-lucide="home"></i>
+                <span>Home</span>
+            </a>
+            <a href="browse.html" class="nav-item active">
+                <i data-lucide="search"></i>
+                <span>Browse</span>
+            </a>
+            <a href="addbook.html" class="nav-item">
+                <i data-lucide="plus-circle"></i>
+                <span>Add</span>
+            </a>
+            <a href="mybooks.html" class="nav-item">
+                <i data-lucide="book-open"></i>
+                <span>My Books</span>
+            </a>
+            <a href="profile.html" class="nav-item">
+                <i data-lucide="user"></i>
+                <span>Profile</span>
+            </a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
